@@ -5,6 +5,7 @@ import { Router } from "@angular/router";
 import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +15,7 @@ export class AuthenticationService {
 
   constructor(
     public afStore: AngularFirestore,
-    public ngFireAuth: AngularFireAuth,
+    public ngFireAuth: AngularFireAuth, 
     public router: Router,  
     public ngZone: NgZone 
   ) {
