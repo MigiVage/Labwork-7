@@ -25,7 +25,7 @@ import { environment } from '../environments/environment'; // Import Environment
             IonicModule.forRoot(),
             AppRoutingModule,
             IonicStorageModule.forRoot(), // Import Ionic Storage Module
-            AngularFireModule.initializeApp(environment.firebase), // Import Firebase Modules
+            AngularFireModule.initializeApp(environment.firebaseConfig), // Import Firebase Modules
             AngularFirestoreModule, // Import Firebase Modules
             AngularFireDatabaseModule, // Import Firebase Modules
             AngularFireAuthModule // Import Firebase Modules
