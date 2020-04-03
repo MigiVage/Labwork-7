@@ -22,11 +22,6 @@ const routes: Routes = [
       }
     ]
   },
-  {
-    path: '',
-    redirectTo: 'dashboard/welcome',
-    pathMatch: 'full'
-  },
 ];
 
 @NgModule({
