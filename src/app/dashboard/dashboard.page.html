@@ -3,14 +3,22 @@ Eemil Hartikainen 1800699
 Mikko Vauhkonen 1800691
 Matias Kohanevic 1800715
 -->
-<ion-header>
-  <ion-toolbar>
-    <ion-title>dashboard</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
 
-<ion-content>
-  <ion-button type="submit" (click)="authService.SignOut()" expand="block"
-    >Logout</ion-button
-  >
-</ion-content>
+    <ion-tab-button tab="welcome">
+      <ion-icon name="person-circle"></ion-icon>
+      <ion-label>Welcome</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="songs">
+      <ion-icon name="map"></ion-icon>
+      <ion-label>Songs</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="about">
+      <ion-icon name="information-circle"></ion-icon>
+      <ion-label>About</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
