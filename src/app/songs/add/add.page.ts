@@ -16,7 +16,7 @@ import { SongService } from '../../services/song.service'; // Import SongService
 })
 export class AddPage implements OnInit {
   // Empty song object
-  song: Song = { title: '', released: 2020, artist: '' };
+  song: Song = { title: '', released: 2020, artist: '', userId: '' };
   errorMessage: string;
   // Import dependencies
   constructor(private router: Router, private songService: SongService) { }
@@ -31,7 +31,7 @@ export class AddPage implements OnInit {
       // Save song to firebase
       this.songService.add_SongInfo(this.song);
       // Reset values after saving
-      this.song = { title: '', released: 2020, artist: ''};
+      this.song = { title: '', released: 2020, artist: '', userId: ''};
       this.router.navigate(['tabs', 'songs']); // Redirect back to songs page
     } else {
       this.errorMessage = 'Song title and artist name can not be empty!';

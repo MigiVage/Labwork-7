@@ -1,7 +1,7 @@
 /*
-Iris Albrecht 902170
-Hakan Kucukel 1702362
-Antonin Venuti 1902162
+Eemil Hartikainen 1800699
+Mikko Vauhkonen 1800691
+Matias Kohanevic 1800715
 */
 import { Injectable } from '@angular/core';
 import { AngularFirestore} from '@angular/fire/firestore'; // import AngularFirestore
