@@ -1,7 +1,7 @@
 /*
-Iris Albrecht 902170
-Hakan Kucukel 1702362
-Antonin Venuti 1902162
+Eemil Hartikainen 1800699
+Mikko Vauhkonen 1800691
+Matias Kohanevic 1800715
 */
 
 import { Component, OnInit } from '@angular/core';
@@ -16,7 +16,7 @@ import { SongService } from '../../services/song.service'; // Import SongService
 })
 export class AddPage implements OnInit {
   // Empty song object
-  song: Song = { title: '', released: 2019, singer: '', userId: '' };
+  song: Song = { title: '', released: 2020, artist: '' };
   errorMessage: string;
   // Import dependencies
   constructor(private router: Router, private songService: SongService) { }
@@ -27,14 +27,14 @@ export class AddPage implements OnInit {
   add() {
     // Simple validation
     if (this.song.title && this.song.title.length > 2 &&
-      this.song.singer && this.song.singer.length > 2) {
+      this.song.artist && this.song.artist.length > 2) {
       // Save song to firebase
       this.songService.add_SongInfo(this.song);
       // Reset values after saving
-      this.song = { title: '', released: 2019, singer: '', userId: '' };
+      this.song = { title: '', released: 2020, artist: ''};
       this.router.navigate(['tabs', 'songs']); // Redirect back to songs page
     } else {
-      this.errorMessage = 'Song title and singer name can not be empty!';
+      this.errorMessage = 'Song title and artist name can not be empty!';
     }
 
   }
