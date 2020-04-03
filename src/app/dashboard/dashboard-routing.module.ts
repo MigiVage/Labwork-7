@@ -6,8 +6,27 @@ import { DashboardPage } from './dashboard.page';
 const routes: Routes = [
   {
     path: '',
-    component: DashboardPage
-  }
+    component: DashboardPage,
+    children: [
+      {
+        path: 'welcome',
+        loadChildren: '../welcome/welcome.module#WelcomePageModule'
+      },
+      {
+        path: 'songs',
+        loadChildren: '../songs/songs.module#SongsPageModule'
+      },
+      {
+        path: 'about',
+        loadChildren: '../about/about.module#AboutPageModule'
+      }
+    ]
+  },
+  {
+    path: '',
+    redirectTo: 'dashboard/welcome',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({

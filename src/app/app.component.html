@@ -1,3 +1,21 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <!-- <ion-router-outlet></ion-router-outlet> -->
+  <ion-split-pane contentId="menu-content" when="xs" [disabled]="true"
+    (ionSplitPaneVisible)="onSplitPaneVisible(event)">
+    <ion-menu contentId="menu-content" menuId="menu-content" side="start" type="overlay">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>My app</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle>
+            <ion-button type="submit" (click)="authService.SignOut()" expand="block">Logout</ion-button>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="menu-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
